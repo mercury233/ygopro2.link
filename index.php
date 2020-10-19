@@ -1,0 +1,1 @@
+<?php header('Location: https://ygopro2.lofter.com/', true, 302); ?>
