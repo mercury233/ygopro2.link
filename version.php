@@ -1,2 +1,2 @@
-2020-11-19:.:https://ygopro2.link/downloads.html
-更新BLVO(1103)等新卡
+2020-12-01:.:https://ygopro2.link/downloads.html
+更新SD40等新卡和部分异画
