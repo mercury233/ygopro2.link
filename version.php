@@ -1,2 +1,2 @@
-2021-10-01:.:https://ygopro2.link/downloads.html
-更新WPP2等新卡
+2021-11-01:.:https://ygopro2.link/downloads.html
+更新BACH(1107)等新卡
