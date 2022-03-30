@@ -1,2 +1,2 @@
-2022-03-15:.:https://ygopro2.link/downloads.html
-更新4月禁卡表
+2022-03-30:.:https://ygopro2.link/downloads.html
+更新DBTM等新卡
