@@ -1,2 +1,2 @@
-2022-08-15:.:https://ygopro2.link/downloads.html
-更新SR13等新卡
+2022-09-06:.:https://ygopro2.link/downloads.html
+更新DBAD等新卡
