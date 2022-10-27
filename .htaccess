@@ -1,14 +1,28 @@
+<FilesMatch "^version">
 Header unset Pragma
 Header unset Cache-Control
 Header unset Last-Modified
 Header set Pragma "no-cache"
 Header set Cache-Control "max-age=0, no-cache, no-store, must-revalidate"
 Header set Expires "Thu, 1 Jan 1970 00:00:00 GMT"
+</FilesMatch>
 
 RewriteEngine On
 
-RewriteCond %{REQUEST_FILENAME} !-f
-RewriteRule ^([^\.]+)/([^\.]+)$ $1.php?q=$2 [NC,L]
+#RewriteCond %{REQUEST_FILENAME} !-f
+#RewriteRule ^([^\.]+)/([^\.]+)$ $1.php?q=$2 [NC,L]
 
-RewriteCond %{REQUEST_FILENAME} !-f
-RewriteRule ^([^\.]+)$ $1.php [NC,L]
+#RewriteCond %{REQUEST_FILENAME} !-f
+#RewriteRule ^([^\.]+)$ $1.php [NC,L]
+
+RewriteCond %{HTTP_HOST} ^ygopro2.link$ [NC,OR]
+RewriteCond %{HTTP_HOST} ^www.ygopro2.link$ [NC]
+RewriteRule ^(.*)$ https://ygopro2.com/$1 [R=301,L]
+
+RewriteBase /
+RewriteCond %{HTTP_HOST} ^www\.(.*)$ [NC]
+RewriteRule ^(.*)$ https://%1/$1 [R=301,L]
+
+RedirectMatch 301 /downloads.html /download/
+
+RewriteRule ^(version)$ $1.php [NC,L]
