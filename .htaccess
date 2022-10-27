@@ -9,6 +9,10 @@ Header set Expires "Thu, 1 Jan 1970 00:00:00 GMT"
 
 RewriteEngine On
 
+RewriteCond %{HTTP_HOST} !=localhost
+RewriteCond %{HTTP:KERSSL} !on
+RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
 #RewriteCond %{REQUEST_FILENAME} !-f
 #RewriteRule ^([^\.]+)/([^\.]+)$ $1.php?q=$2 [NC,L]
 
