@@ -7,7 +7,11 @@ Header set Cache-Control "max-age=0, no-cache, no-store, must-revalidate"
 Header set Expires "Thu, 1 Jan 1970 00:00:00 GMT"
 </FilesMatch>
 
+Header always set Strict-Transport-Security "max-age=31536000"
+
 RewriteEngine On
+ErrorDocument 404 /404/
+DirectorySlash Off
 
 RewriteCond %{HTTP_HOST} ^ygopro2.link$ [NC]
 RewriteRule ^downloads\.html.*$ https://ygopro2.com/download/ [R=301,NC,L]
@@ -24,4 +28,10 @@ RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
 RewriteRule ^(version)$ $1.php [NC,L]
 RewriteRule ^downloads\.html.*$ /download/ [R=301,NC,L]
 
-ErrorDocument 404 /404/
+RewriteRule ^$ /index.html [L]
+RewriteRule ^/$ /index.html [L]
+
+RewriteCond %{REQUEST_FILENAME} -d
+RewriteRule ^(.+)$ /$1/
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.+)/$ /$1/index.html [L]
