@@ -13,11 +13,11 @@ RewriteEngine On
 ErrorDocument 404 /404/
 DirectorySlash Off
 
-RewriteCond %{HTTP_HOST} ^ygopro2.link$ [NC]
-RewriteRule ^downloads\.html.*$ https://ygopro2.com/download/ [R=301,NC,L]
+#RewriteCond %{HTTP_HOST} ^ygopro2.link$ [NC]
+#RewriteRule ^downloads\.html.*$ https://ygopro2.com/download/ [R=301,NC,L]
 
-RewriteCond %{HTTP_HOST} ^ygopro2.link$ [NC,OR]
-RewriteCond %{HTTP_HOST} ^www.ygopro2.link$ [NC,OR]
+#RewriteCond %{HTTP_HOST} ^ygopro2.link$ [NC,OR]
+#RewriteCond %{HTTP_HOST} ^www.ygopro2.link$ [NC,OR]
 RewriteCond %{HTTP_HOST} ^www.ygopro2.com$ [NC]
 RewriteRule ^(.*)$ https://ygopro2.com/$1 [R=301,L]
 
